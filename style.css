@@ -1,0 +1,177 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.game-board{
+    width: 100%;
+    height: 600px;
+    border-bottom: 20px solid rgb(61, 150, 61);
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#87CEEB, #E0F6FF);
+}
+
+.pipe{
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    animation: pipe-animation 1.5s infinite linear;
+}
+
+.mario{
+    position: absolute;
+    bottom: 0px;
+    width: 150px;
+}
+
+.jump{
+    animation: jump 500ms ease-out;
+}
+
+.clouds{
+    width: 400px;
+    position: absolute;
+    animation: clouds-animation 20s infinite linear;
+}
+
+.game-over{
+    width: 400px;
+    position: absolute;
+    left: 30%;
+    top: 5%;
+    animation: game-over 2s; 
+}
+
+.btn-game-over{
+    width: 180px;
+    height: 40px;
+    position: absolute;
+    left: 32%;
+    top: 85%;
+    border: none;
+    border-radius: 10px;
+    background-color: #1fc050;
+    cursor: pointer;
+    transition: all .5s;
+    font-size: 18px;
+    animation: game-over 2s;
+}
+
+.btn-game-over:hover{
+    background-color: #0f9c39;
+}
+
+.btn-game-over2{
+    width: 180px;
+    height: 40px;
+    position: absolute;
+    left: 51%;
+    top: 85%;
+    border: none;
+    border-radius: 10px;
+    background-color: #1fc050;
+    cursor: pointer;
+    transition: all .5s;
+    font-size: 18px;
+    animation: game-over 2s;
+}
+
+.btn-game-over2:hover{
+    background-color: #0f9c39;
+}
+
+.score{
+    position: absolute;
+    right: 40px;
+    top: 5px;
+    user-select: none;
+    z-index: 1;
+}
+
+.geral-point{
+    position: absolute;
+    left: 39%;
+    top: 75%;
+    user-select: none;
+}
+
+
+@keyframes pipe-animation {
+    from{
+       right:  -80px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes jump {
+
+    0%{
+        bottom: 0;
+    }
+
+    40%{
+        bottom: 180px;
+    }
+    50%{
+        bottom: 180px;
+    }
+    60%{
+        bottom: 180px;
+    }
+
+    100%{
+        bottom: 0;
+    }
+    
+}
+
+@keyframes clouds-animation {
+    from {
+        right: -400px;
+    }
+
+    to{
+        right: 100%;
+    }
+}
+
+@keyframes game-over {
+    from{
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+    }
+}
+
+/* tela inicial */
+
+.mario-start{
+    position: absolute;
+    width: 100%;
+}
+
+.btn-start{
+    position: absolute;
+    width: 180px;
+    height: 40px;
+    left: 60%;
+    top: 75%;
+    border: none;
+    border-radius: 10px;
+    background-color: #1fc050;
+    cursor: pointer;
+    font-size: 18px;
+    transition: all .5s;
+}
+
+.btn-start:hover{
+    background-color: #0f9c39;
+}
